@@ -8,6 +8,7 @@ import RepeatedSubtractionDivision from './components/RepeatedSubtractionDivisio
 import { lessonData } from './data/lessonData'
 import { readingLibrary } from './data/readingLibrary'
 import './App.css'
+import logo from './assets/logo/logo-white-bkg.png';
 
 const buildLessonList = (subjects) =>
   subjects.flatMap((subject) => subject.sections.flatMap((section) => section.lessons))
@@ -3043,7 +3044,7 @@ function App() {
         <div className="top-bar__inner">
           <div className="top-bar__logo" aria-label="Parrot Learning logo">
             <img
-              src="/src/assets/logo/logo-white-bkg.png"
+              src={logo}
               alt="Parrot Learning logo"
               className="top-bar__logo-image"
             />
