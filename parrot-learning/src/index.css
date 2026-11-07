@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Agrandir";
+  src: url("./assets/font/PPAgrandir-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Agrandir";
+  src: url("./assets/font/PPAgrandir-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --color-text: #0b1659;
+  --color-text-muted: #39479F;
+  --color-text-secondary: #6f7aa8;
+  --color-primary: #118DC6;
+  --color-primary-hover: #0074A9;
+  --color-primary-soft: #deeeff;
+  --color-secondary: #d13939;
+  --color-background: #f5f7ff;
+  --color-surface: #ffffff;
+  --color-card: #f8faff;
+  --color-border: #dfe7ff;
+  --color-focus: #FCB132;
+  --color-white: #ffffff;
+  --shadow-soft: 0 12px 30px rgba(11, 22, 89, 0.08);
+  --border-radius: 18px;
+  --font-primary: "Agrandir", 'Segoe UI', sans-serif;
+
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color-text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+button {
+  border: none;
+  background: none;
+}

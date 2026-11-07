@@ -1,0 +1,2000 @@
+.top-bar {
+  width: 100%;
+  background: #118dc6;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.top-bar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+.top-bar__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  box-shadow: 0 8px 18px rgba(11, 22, 89, 0.12);
+}
+
+.top-bar__logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.top-bar__greeting {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.app-shell {
+  display: flex;
+  min-height: calc(100vh - 84px);
+  background: var(--color-surface);
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+}
+
+.sidebar {
+  background: var(--color-background);
+  border-right: 1px solid var(--color-border);
+  padding: 2rem 0rem 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+}
+
+.brand-label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.grade-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.grade-button {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 16px 0px 0px 16px;
+  background: transparent;
+  color: var(--color-text);
+  padding: 0.75rem 1.25rem 0.75rem 1.5rem;
+  text-align: left;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.grade-button:hover {
+  background: var(--color-primary-soft);
+  border-color: var(--color-border);
+}
+
+.grade-button:focus-visible,
+.subject-card:focus-visible,
+.lesson-card:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.grade-button.is-active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.main-panel {
+  flex: 1;
+  padding: 2.25rem 2.5rem 3rem;
+}
+
+.main-panel.lesson-detail-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 2.5rem 3rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.3rem;
+  color: var(--color-primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 2.6vw, 2.7rem);
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.progress-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 92px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+}
+
+.progress-pill__ring {
+  width: 42px;
+  height: 42px;
+  transform: rotate(-90deg);
+}
+
+.progress-pill__track,
+.progress-pill__value {
+  fill: none;
+  stroke-width: 6;
+}
+
+.progress-pill__track {
+  stroke: rgba(77, 124, 255, 0.16);
+}
+
+.progress-pill__value {
+  stroke: var(--color-primary);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-pill__percent {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.subject-panel {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.subject-selector {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.subject-card {
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-card);
+  padding: 1rem 1.5rem 1rem 0.65rem;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.subject-card.is-selected {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.subject-card__content {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.subject-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 10px;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.subject-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.subject-card__title {
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.subject-card__description {
+  font-size: 0.96rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.lesson-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.selection-status {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.lesson-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.lesson-group {
+  min-width: 0;
+}
+
+.lesson-group--factors {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.lesson-group--grade3-place-value {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.lesson-group--grade4-place-value {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.lesson-group--grade4-fractions {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.lesson-group__title {
+  margin: 0 0 1rem;
+  font-size: 1.32rem;
+  color: var(--color-text);
+}
+
+.lesson-group__list {
+  list-style: decimal;
+  margin: 0;
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lesson-group__item {
+  color: var(--color-text);
+}
+
+.lesson-link {
+  display: inline;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  padding: 0.35rem 0.65rem 0.35rem 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lesson-link:hover {
+  background: var(--color-primary-soft);
+}
+
+.lesson-link.is-selected {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.lesson-link__progress {
+  font-weight: 600;
+}
+
+.lesson-link__progress-group {
+  display: inline;
+  margin-left: 0.25rem;
+  white-space: nowrap;
+}
+
+.lesson-link__progress.is-in-progress {
+  color: #1b7bff;
+}
+
+.lesson-link__progress.is-complete {
+  color: #c58a00;
+}
+
+.lesson-link__progress.is-zero {
+  color: var(--color-text-secondary);
+}
+
+.lesson-link__completions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: 0.25rem;
+  color: #c58a00;
+  font-weight: 600;
+}
+
+.lesson-link__completion-star {
+  font-size: 0.85em;
+}
+
+.lesson-detail-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lesson-detail__layout {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.lesson-detail__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.lesson-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 120px;
+  margin-left: auto;
+  padding-top: 0.5rem;
+}
+
+.lesson-progress__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.6rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.lesson-progress__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.lesson-progress__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.6rem 0.7rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.lesson-progress__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.6rem;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.lesson-progress__number--score {
+  flex-direction: column;
+  gap: 0.66rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.lesson-progress__number--completions {
+  gap: 0.35rem;
+}
+
+.lesson-progress__completion-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lesson-progress__completion-star {
+  color: #c58a00;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.lesson-progress__score-value {
+  font-size: 1.9rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.lesson-progress__stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  min-height: 1.2rem;
+}
+
+.lesson-progress__star {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: rgba(11, 22, 89, 0.2);
+}
+
+.lesson-progress__star.is-filled {
+  color: var(--color-focus);
+  animation: lesson-star-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
+
+@keyframes lesson-star-pop {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.45) rotate(-12deg);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.2) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.lesson-breadcrumbs {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  text-transform: capitalize;
+}
+
+.lesson-breadcrumbs__separator {
+  color: var(--color-text-muted);
+}
+
+.lesson-breadcrumbs__link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.lesson-breadcrumbs__link:hover {
+  text-decoration: underline;
+}
+
+.lesson-breadcrumbs__current {
+  color: var(--color-text);
+}
+
+.lesson-detail__card {
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.lesson-detail__title {
+  margin: 0 0 2.5rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.2rem);
+  color: var(--color-text-secondary);
+  font-weight: 700;
+}
+
+.lesson-detail__question {
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.reading-story {
+  max-width: 760px;
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-background);
+}
+
+.reading-story__title {
+  margin: 0 0 0.75rem;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+.reading-story__text,
+.reading-story__passage p {
+  margin: 0;
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.reading-story__passage {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.reading-story__passage h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.fraction-expression {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.fraction-expression__term {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fraction-expression__fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  line-height: 1.1;
+  vertical-align: middle;
+}
+
+.fraction-expression__bar {
+  width: 100%;
+  border-top: 2px solid currentColor;
+}
+
+.fraction-entry-answer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fraction-entry-answer__whole {
+  width: 4rem !important;
+  font-size: 2rem !important;
+  font-weight: 700;
+  text-align: center;
+}
+
+.fraction-entry-answer__fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.25rem;
+  width: 4.5rem;
+}
+
+.fraction-entry-answer__fraction .lesson-detail__field {
+  width: 100%;
+  text-align: center;
+}
+
+.fraction-entry-answer__bar {
+  border-top: 2px solid var(--color-text);
+}
+
+.lesson-detail__place-value-display {
+  margin: -0.5rem 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.lesson-detail__place-value-display .is-underlined {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.15em;
+}
+
+.multiplication-array {
+  width: 480px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+}
+
+.multiplication-pattern {
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+}
+
+.multiplication-pattern th,
+.multiplication-pattern td {
+  width: 4rem;
+  height: 3.25rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+  font-weight: 700;
+}
+
+.multiplication-pattern th {
+  background: var(--color-background);
+  color: var(--color-text-secondary);
+}
+
+.multiplication-pattern__input {
+  width: 3.5rem;
+  max-width: 90%;
+  height: 2.25rem;
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  text-align: center;
+  font: inherit;
+  font-weight: 600;
+}
+
+.division-picture {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+}
+
+.division-picture__group {
+  display: flex;
+  min-width: 5.5rem;
+  min-height: 5.25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-background);
+}
+
+.division-picture__shapes {
+  display: grid;
+  grid-template-columns: repeat(4, 0.75rem);
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.division-picture__shape {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--color-primary);
+}
+
+.division-picture__shape--circle {
+  border-radius: 50%;
+}
+
+.division-picture__group-label {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.multiplication-array__clear {
+  display: block;
+  margin: 0;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.multiplication-array__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  width: 480px;
+  min-height: 2.35rem;
+}
+
+.multiplication-array__undo {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.multiplication-array__clear:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.multiplication-array__undo:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.multiplication-array td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d9dde3;
+}
+
+.multiplication-array__cell {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.multiplication-array__cell::after {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2f80ed;
+  content: '';
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.multiplication-array__cell.is-selected::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lesson-detail__question--final {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.lesson-detail__instruction {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.lesson-detail__instruction--reminder {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.lesson-progress__score-value {
+  display: inline-block;
+  animation: lesson-score-slide-up 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes lesson-score-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-progress__score-value {
+    animation: none;
+  }
+}
+
+.lesson-detail__answer-wrap {
+  margin-top: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.lesson-detail__answer-wrap--expanded-form-help {
+  margin-top: 24px;
+}
+
+.lesson-detail__input-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lesson-detail__reveal {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lesson-detail__reveal:hover {
+  text-decoration: underline;
+}
+
+.expanded-form-help__toggle {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+}
+
+.expanded-form-help__toggle:hover {
+  text-decoration: underline;
+}
+
+.expanded-form-help__inline {
+  margin-left: 0.75rem;
+  white-space: nowrap;
+}
+
+.expanded-form-help__table {
+  margin: 1rem 0 2.5rem;
+}
+
+.lesson-detail__revealed-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.lesson-detail__revealed-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.lesson-detail__submit {
+  align-self: flex-start;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font: inherit;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lesson-detail__submit:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.fraction-picture-helper__link {
+  display: block;
+  margin-top: 24px;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+}
+
+.fraction-picture-helper__link:hover {
+  text-decoration: underline;
+}
+
+.simplify-help {
+  margin-top: 1.5rem;
+}
+
+.simplify-help__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.simplify-help__step:last-child {
+  margin-top: calc(1rem + 16px);
+}
+
+.simplify-help__step p {
+  margin: 0 0 0.5rem;
+}
+
+.simplify-help__factor-group {
+  margin-bottom: 1rem;
+}
+
+.simplify-help__factor-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.simplify-help__factor-inputs .lesson-detail__field {
+  width: 3rem;
+  max-width: 3rem;
+  text-align: center;
+}
+
+.simplify-help__factor-comma {
+  align-self: flex-end;
+  margin-bottom: 0.6rem;
+}
+
+.simplify-help__number {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #1976d2;
+  font-weight: 700;
+}
+
+.fraction-picture-helper {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  max-width: 640px;
+}
+
+.fraction-picture-helper__model {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
+}
+
+.fraction-picture-helper__hint {
+  margin: 0.25rem 0 0;
+  line-height: 1.5;
+}
+
+.fraction-picture-helper__clickable-bar {
+  display: flex;
+  width: min(100%, 360px);
+  height: 2.5rem;
+  overflow: hidden;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.fraction-picture-helper__piece {
+  flex: 1 1 0;
+  min-width: 1.5rem;
+  border: 0;
+  border-right: 1px solid #000;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.fraction-picture-helper__piece:last-child {
+  border-right: 0;
+}
+
+.fraction-picture-helper__piece.is-selected {
+  background: var(--color-primary);
+}
+
+.fraction-picture-helper__piece:hover,
+.fraction-picture-helper__piece:focus-visible {
+  background: var(--color-primary-soft);
+}
+
+.fraction-picture-helper__piece.is-selected:hover,
+.fraction-picture-helper__piece.is-selected:focus-visible {
+  background: var(--color-primary-hover);
+}
+
+.fraction-verification {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
+.fraction-verification__title {
+  color: var(--color-primary);
+}
+
+.fraction-verification__equation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+}
+
+.fraction-verification__equation > .fraction-expression__fraction {
+  font-size: 2rem;
+}
+
+.fraction-verification__equation > .fraction-expression__fraction .fraction-expression__bar {
+  margin: 8px 0;
+}
+
+.fraction-verification__multipliers {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.fraction-verification__multipliers .fraction-verification__row > span:first-child {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.fraction-verification__row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.fraction-verification__field {
+  width: 3rem;
+  text-align: center;
+}
+
+.fraction-verification__multipliers .fraction-verification__field {
+  margin-left: 0.15rem;
+}
+
+.fraction-verification__divisor-bar {
+  width: 96px;
+  margin: 0.15rem 0 0.15rem 1.15rem;
+  border-top: 2px solid currentColor;
+}
+
+.fraction-verification__answer-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3rem;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.fraction-verification__answer-field {
+  width: 3.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.fraction-verification__bar {
+  width: 100%;
+  margin: 12px 0;
+  border-top: 2px solid currentColor;
+}
+
+.simplify-help__final-bar {
+  margin: 4px 0;
+}
+
+.fraction-verification__denominator {
+  min-width: 2rem;
+  text-align: center;
+}
+
+.lesson-detail__field,
+.lesson-detail__textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-background);
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.lesson-detail__field {
+  width: 96px;
+  max-width: 96px;
+}
+
+.lesson-detail__field--place-value-millions {
+  width: 136px;
+  max-width: 136px;
+}
+
+.lesson-detail__answer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lesson-detail__remainder-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lesson-detail__remainder-field {
+  width: 64px;
+  max-width: 64px;
+}
+
+.factor-list-answer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.factor-list-answer__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.factor-list-answer__item .lesson-detail__field {
+  width: 64px;
+  max-width: 64px;
+}
+
+.place-value-arrangement {
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.place-value-arrangement th,
+.place-value-arrangement td {
+  min-width: 5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.place-value-arrangement th {
+  background: var(--color-background);
+  color: var(--color-text-secondary);
+}
+
+.place-value-arrangement .lesson-detail__field {
+  width: 3.5rem;
+  max-width: 3.5rem;
+  text-align: center;
+}
+
+.lesson-detail__answer-label {
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.lesson-detail__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.lesson-detail__options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lesson-detail__options--number-words .lesson-detail__option {
+  width: min(100%, 640px);
+  white-space: nowrap;
+}
+
+.fraction-visual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: min(280px, calc(100vw - 64px));
+  margin: 0 0 1.5rem;
+}
+
+.fraction-visual--question {
+  margin-left: 33px;
+}
+
+.fraction-visual__item {
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.fraction-visual__model {
+  width: 100%;
+}
+
+.fraction-visual__label {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.fraction-visual__bar {
+  display: flex;
+  width: min(100%, 280px);
+  height: 2.5rem;
+  overflow: hidden;
+  border: 2px solid var(--color-text);
+  border-radius: 5px;
+}
+
+.fraction-visual__segment {
+  flex: 1;
+  border-right: 1px solid var(--color-text);
+  background: var(--color-surface);
+}
+
+.fraction-visual__segment:last-child {
+  border-right: 0;
+}
+
+.fraction-visual__segment.is-shaded {
+  background: var(--color-primary);
+}
+
+.fraction-visual__number-line {
+  position: relative;
+  width: min(100%, 280px);
+  height: 2rem;
+  margin: 0.5rem 0.35rem 0;
+}
+
+.fraction-visual__model--compact .fraction-visual__bar,
+.fraction-visual__model--compact .fraction-visual__number-line {
+  width: 100%;
+}
+
+.lesson-detail__option--fraction {
+  align-items: flex-start;
+}
+
+.lesson-detail__option-content {
+  display: grid;
+  gap: 0.35rem;
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.lesson-detail__options--fractions {
+  gap: 1.25rem;
+}
+
+.lesson-detail__options--picture-fractions .lesson-detail__option-content {
+  width: min(280px, calc(100vw - 64px));
+}
+
+.lesson-detail__options--picture-fractions {
+  gap: 2rem;
+}
+
+.fraction-visual__track {
+  position: absolute;
+  top: 0.65rem;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-text);
+}
+
+.fraction-visual__tick {
+  position: absolute;
+  top: 0.4rem;
+  width: 2px;
+  height: 0.55rem;
+  background: var(--color-text);
+  transform: translateX(-50%);
+}
+
+.fraction-visual__marker {
+  position: absolute;
+  top: 0.34rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  background: var(--color-secondary);
+  box-shadow: 0 0 0 1px var(--color-secondary);
+  transform: translateX(-50%);
+}
+
+.fraction-visual__endpoint {
+  position: absolute;
+  top: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.fraction-visual__endpoint--start {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.fraction-visual__endpoint--end {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.fraction-builder {
+  display: grid;
+  gap: 1.25rem;
+  width: min(280px, calc(100vw - 64px));
+  margin: 0 0 1.5rem;
+}
+
+.fraction-builder__target,
+.fraction-builder__slices {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.fraction-builder__label {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.fraction-builder__bar {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  overflow: hidden;
+  border: 2px solid var(--color-text);
+  border-radius: 5px;
+}
+
+.fraction-builder__slice {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-right: 1px solid var(--color-text);
+  border-radius: 0;
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.fraction-builder__slice:last-child {
+  border-right: 0;
+}
+
+.fraction-builder__slice.is-shaded {
+  background: var(--color-primary);
+}
+
+.fraction-builder__slice:disabled {
+  cursor: default;
+}
+
+.fraction-builder__slice:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid var(--color-focus);
+  outline-offset: -3px;
+}
+
+.lesson-detail__option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(100%, 640px);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lesson-detail__option input {
+  accent-color: var(--color-primary);
+}
+
+.lesson-detail__success-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.82);
+  z-index: 1000;
+  animation: success-overlay-fade-in 0.35s ease forwards, success-overlay-fade-out 0.8s ease 1.8s forwards;
+}
+
+.lesson-detail__success-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.3rem 2rem;
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: 700;
+  animation: success-box-fade-in 0.35s ease forwards, success-box-fade-out 0.8s ease 1.8s forwards;
+}
+
+.lesson-detail__success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  background: #2ec66d;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.lesson-detail__success-icon.is-incorrect {
+  background: #e05252;
+}
+
+.lesson-detail__success-icon.is-blank {
+  background: #f2c94c;
+  color: #5c4300;
+}
+
+@keyframes success-overlay-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes success-box-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes success-overlay-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes success-box-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .grade-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-panel {
+    padding: 1.5rem 1rem 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .lesson-group--grade4-fractions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .lesson-group--grade4-place-value {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .subject-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-block {
+    justify-content: center;
+  }
+}
+
+/* Place-value subtraction worksheet */
+.place-value-subtraction {
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+}
+
+.place-value-subtraction__table-wrap {
+  position: relative;
+  width: max-content;
+  min-width: 100%;
+  padding: 1.25rem;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.place-value-subtraction__key {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.place-value-subtraction__grid,
+.place-value-subtraction__row,
+.place-value-subtraction__answer-row {
+  display: grid;
+  grid-template-columns: 72px 52px repeat(3, 72px);
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.place-value-subtraction__grid--header {
+  margin-left: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.place-value-subtraction__row {
+  margin-bottom: 0.7rem;
+}
+
+.place-value-subtraction__number {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.place-value-subtraction__operator,
+.place-value-subtraction__operator-spacer {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.place-value-subtraction__cell {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.place-value-subtraction__cell input {
+  width: 58px;
+  height: 48px;
+  padding: 0.25rem;
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.place-value-subtraction__cell input:focus {
+  outline: 3px solid rgba(17, 141, 198, 0.2);
+  border-color: var(--color-primary);
+}
+
+.place-value-subtraction__decrease {
+  position: absolute;
+  top: -8px;
+  right: 1px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c62828;
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.place-value-subtraction__decrease:hover,
+.place-value-subtraction__decrease:focus-visible {
+  background: #a61f1f;
+}
+
+.place-value-subtraction__decrease--key {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  cursor: default;
+}
+
+.place-value-subtraction__borrowed-digit {
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  z-index: 1;
+  color: var(--color-text-secondary);
+  font-size: calc(0.8rem + 2px);
+  line-height: 1;
+}
+
+.place-value-subtraction__borrowed-digit::after {
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  width: 19px;
+  height: 2px;
+  background: #c62828;
+  content: '';
+  transform: rotate(-35deg);
+}
+
+.place-value-subtraction__answer-row {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-border);
+}
+
+.place-value-subtraction__cell--answer {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.place-value-subtraction__cell--answer input {
+  border-color: var(--color-primary);
+}
+
+.place-value-subtraction__cell--answer span:last-child {
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Number Line Styles */
+.number-line {
+  width: 100%;
+  margin: 2rem 0 2rem 0;
+  padding: 0rem 3rem 0rem 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.number-line__container {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  min-width: 300px;
+}
+
+.number-line__svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  transform: translateY(-50%);
+}
+
+.number-line__line {
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.number-line__labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none;
+}
+
+.number-line__point {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.number-line__tick-mark {
+  width: 2px;
+  height: 16px;
+  background: var(--color-primary);
+  transform: translateY(12px);
+}
+
+.number-line__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  transform: translateY(12px);
+}
+
+.number-line__input {
+  width: 40px;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  background: var(--color-white);
+  color: var(--color-text);
+  text-align: center;
+  cursor: text;
+  user-select: auto;
+  display: block;
+  transform: translateY(8px);
+}
+
+.number-line__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(77, 124, 255, 0.2);
+}
+
+.number-line__explanation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(77, 124, 255, 0.08);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 6px;
+}
+
+.number-line__explanation p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.number-line__steps {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  pointer-events: none;
+}
+
+.number-line__step-label {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.repeated-division { margin: 1.25rem 0; }
+.repeated-division__instruction { margin: 0 0 1rem; }
+.repeated-division__table { border-collapse: separate; border-spacing: 0 0.55rem; }
+.repeated-division__table td { min-width: 1.5rem; padding: 0.35rem; text-align: center; font-size: 1.1rem; font-weight: 600; }
+.repeated-division__operator { min-width: 0.75rem; padding-left: 0.1rem; padding-right: 0.1rem; }
+.repeated-division__divisor-cell.is-highlighted { border-radius: 4px; background: #ffe08a; color: #5c4300; }
+.repeated-division__table input { width: 5rem; padding: 0.5rem; border: 1px solid var(--color-primary); border-radius: 6px; text-align: center; font: inherit; }
+.repeated-division__check, .repeated-division__choice { margin: 0.25rem; padding: 0.5rem 1rem; border: 1px solid var(--color-primary); border-radius: 6px; background: var(--color-primary); color: white; cursor: pointer; font: inherit; }
+.repeated-division__confirmation, .repeated-division__result { margin-top: 1rem; background-color:#f8f8f8; padding: 0.5rem; border-radius: 6px; }
+.repeated-division__message { margin: 0.75rem 0 0; color: var(--color-primary); font-weight: 600; }
+.repeated-division__message-success { color: #2e7d32; }
+.repeated-division__message-text { color: var(--color-primary); }
+.repeated-division__hint { margin: 0 0 0.75rem; color: var(--color-text-secondary); font-size: 0.9rem; font-weight: 500; }
+.repeated-division__highlighted-word { border-radius: 3px; background: #ffe08a; color: #5c4300; font-weight: 700; }
+.repeated-division__final-equation { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin: 0 0 0.75rem; }
+.repeated-division__final-input { width: 4rem; padding: 0.35rem 0.5rem; border: 1px solid var(--color-primary); border-radius: 6px; background: #fff; color: var(--color-text); font: inherit; font-weight: 600; text-align: center; }
+.repeated-division__final-actions { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.repeated-division__choice { background: transparent; color: var(--color-primary); }
